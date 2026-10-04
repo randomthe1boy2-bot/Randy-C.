@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Incident Report - Randy C. Admin Abuse</title>
+<style>
+  @page {
+    size: A4;
+    margin: 20mm;
+  }
+  
+  body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+    color: #2d3748;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+  }
+
+  /* Header Section */
+  .header {
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .header-title h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 0 0 6px 0;
+    letter-spacing: -0.5px;
+  }
+
+  .header-title .subtitle {
+    font-size: 13px;
+    color: #718096;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-weight: 600;
+  }
+
+  .status-badge {
+    background-color: #fff5f5;
+    color: #c53030;
+    border: 1px solid #feb2b2;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  /* Metadata Grid */
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    background-color: #f7fafc;
+    border: 1px solid #edf2f7;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 24px;
+    font-size: 13px;
+  }
+
+  .meta-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .meta-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #718096;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  .meta-value {
+    color: #2d3748;
+    font-weight: 500;
+    word-break: break-all;
+  }
+
+  .meta-value code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 12px;
+    color: #4a5568;
+    background: #edf2f7;
+    padding: 2px 4px;
+    border-radius: 4px;
+  }
+
+  /* Section Titles */
+  h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2b6cb0;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 6px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+
+  /* Dialogue / Log Styling */
+  .chat-log {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .chat-entry {
+    background: #f8fafc;
+    border-left: 3px solid #cbd5e0;
+    border-radius: 0 6px 6px 0;
+    padding: 10px 14px;
+    font-size: 13.5px;
+  }
+
+  .chat-entry.suspect {
+    border-left-color: #e53e3e;
+    background: #fff5f5;
+  }
+
+  .chat-entry.victim {
+    border-left-color: #3182ce;
+    background: #ebf8ff;
+  }
+
+  .chat-author {
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+
+  .chat-entry.suspect .chat-author {
+    color: #c53030;
+  }
+
+  .chat-entry.victim .chat-author {
+    color: #2b6cb0;
+  }
+
+  .chat-message {
+    color: #2d3748;
+  }
+
+  .note-box {
+    background-color: #fffaf0;
+    border: 1px solid #feebc8;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #742a2a;
+    margin-top: 16px;
+  }
+
+  /* Key Findings / Bullet Points */
+  ul {
+    padding-left: 20px;
+    margin: 8px 0;
+  }
+
+  li {
+    margin-bottom: 6px;
+    font-size: 13.5px;
+  }
+
+  /* Footer & Signature */
+  .footer {
+    margin-top: 40px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .signature {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2d3748;
+  }
+
+  .evidence-link {
+    display: inline-block;
+    color: #3182ce;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 13px;
+  }
+
+  .evidence-link:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-title">
+      <div class="subtitle">Internal Affairs Incident Report</div>
+      <h1>Admin Abuse Investigation</h1>
+    </div>
+    <div class="status-badge">Under Review</div>
+  </div>
+
+  <!-- Incident Metadata -->
+  <div class="meta-grid">
+    <div class="meta-item">
+      <span class="meta-label">Desk / Department</span>
+      <span class="meta-value">Ownership Desk</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Incident Dates</span>
+      <span class="meta-value">Started: Oct 4, 2026 | Updated: Oct 5, 2026</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Suspect</span>
+      <span class="meta-value">Randy C. <code>866102145891303424</code></span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Victims</span>
+      <span class="meta-value">
+        Emma/The Corrupted <code>1336311401744175114</code><br>
+        DT's art <code>782216755204194335</code>
+      </span>
+    </div>
+  </div>
+
+  <!-- Overview -->
+  <h2>Allegation Overview</h2>
+  <p style="font-size: 13.5px;">
+    <strong>Reported Offense:</strong> Abuse of administrative and ownership permissions within the Discord server, including improper ticket closures, unauthorized removal of staff roles, false representation of position, and threat of perm revocation.
+  </p>
+
+  <!-- Incident Log -->
+  <h2>Documented Exchange & Sequence of Events</h2>
+  <div class="chat-log">
+
+    <div class="chat-entry suspect">
+      <div class="chat-author">Randy C.</div>
+      <div class="chat-message">"So what I'm hearing is if I remove you, the bot stops? [emojis]"</div>
+    </div>
+
+    <div class="chat-entry victim">
+      <div class="chat-author">Emma / The Corrupted</div>
+      <div class="chat-message">"Izaha would most likely not be very happy with that."</div>
+    </div>
+
+    <div class="chat-entry suspect">
+      <div class="chat-author">Randy C.</div>
+      <div class="chat-message">"Hm, don't think you know who I am. But it was a joke, sweetheart."</div>
+    </div>
+
+    <div class="chat-entry victim">
+      <div class="chat-author">Emma / The Corrupted</div>
+      <div class="chat-message">"Oh, I know who you are and I just don't care. And I do know you were joking."</div>
+    </div>
+
+    <div class="chat-entry suspect">
+      <div class="chat-author">Randy C.</div>
+      <div class="chat-message">"Hm? [emoji]"</div>
+    </div>
+
+  </div>
+
+  <p style="font-size: 13.5px; margin-top: 12px; margin-bottom: 12px;">
+    <em>Subsequent Incident:</em> While Emma was in Voice Channel with <strong>DT's art</strong>, a support ticket was opened. Randy C. closed the ticket, stating it was invalid. Emma opened a second ticket requesting tickets not be closed; it was closed again.
+  </p>
+
+  <div class="chat-log">
+
+    <div class="chat-entry victim">
+      <div class="chat-author">Emma / The Corrupted (Voice Channel Drag)</div>
+      <div class="chat-message">Drags Randy C. into VC to clarify rules. Randy C. proceeds to tell the Head of Internal Affairs that he is the "Head Director of Internal Affairs."</div>
+    </div>
+
+    <div class="chat-entry suspect">
+      <div class="chat-author">Randy C. (After Disconnecting)</div>
+      <div class="chat-message"><em>[Pings Emma and DT's Art]</em> "Either of you move me again I'll remove your perms."</div>
+    </div>
+
+    <div class="chat-entry victim">
+      <div class="chat-author">Emma / The Corrupted</div>
+      <div class="chat-message">"We dragged you for a proper reason. You may complain to Izaha, but it will also go nowhere."</div>
+    </div>
+
+    <div class="chat-entry victim">
+      <div class="chat-author">DT's Art</div>
+      <div class="chat-message">"Like u said."</div>
+    </div>
+
+    <div class="chat-entry suspect">
+      <div class="chat-author">Randy C.</div>
+      <div class="chat-message">"Again, you move me, perms will be removed and you'll have to ask Izaha for your perms back."</div>
+    </div>
+
+    <div class="chat-entry victim">
+      <div class="chat-author">Emma / The Corrupted</div>
+      <div class="chat-message">"Now a proper request is that you do not contact me or DT's art until everything is handled."</div>
+    </div>
+
+    <div class="chat-entry suspect">
+      <div class="chat-author">Randy C.</div>
+      <div class="chat-message">"Again, you do not run this show. If you would like, I can demote you both for what was said in general chat."</div>
+    </div>
+
+    <div class="chat-entry victim">
+      <div class="chat-author">Emma / The Corrupted</div>
+      <div class="chat-message">"Same can go with you."</div>
+    </div>
+
+    <div class="chat-entry suspect">
+      <div class="chat-author">Randy C.</div>
+      <div class="chat-message">"If you wanna play around and fuck with the wrong bitch feel free."</div>
+    </div>
+
+  </div>
+
+  <div class="note-box">
+    <strong>Note:</strong> Emma was kicked by Randy C. following a subsequent ticket. (Screenshot pending due to rapid kick/disconnect).
+  </div>
+
+  <!-- Additional Evidence -->
+  <h2>Additional Findings (as of Oct 5, 2026)</h2>
+  <ul>
+    <li>Unilateral role verification bypassing approval processes for DT's art[cite: 1].</li>
+    <li>Unauthorized removal of <code>Internal Affairs</code> roles/permissions[cite: 1].</li>
+    <li>Unauthorized removal of <code>Network | Executive</code> roles[cite: 1].</li>
+  </ul>
+
+  <!-- Signature & Footer -->
+  <div class="footer">
+    <div class="signature">
+      Submitted by: <strong>Emma</strong> | <em>Director of Internal Affairs</em>
+    </div>
+    <a href="https://drive.google.com/drive/folders/1R2k-rlr9qc7fmnfpYJkFJg_x8hD5Ycz1?usp=sharing" class="evidence-link" target="_blank">📂 View Evidence Drive Folder</a>
+  </div>
+
+</body>
+</html>
